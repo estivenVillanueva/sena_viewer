@@ -1,7 +1,6 @@
 package edu.misena.senaviewer.model;
 
 public class Film {
-    // Campos de la clase
     private int id;
     private String title;
     private String genre;
@@ -10,17 +9,16 @@ public class Film {
     private int year;
     private boolean viewed;
 
-    // Constructor con parámetros para inicializar ciertos campos
+    // Constructor
     public Film(String title, String genre, String creator, int duration) {
         this.title = title;
         this.genre = genre;
         this.creator = creator;
         this.duration = duration;
-        this.year = 0;
-        this.viewed = false;
+        this.viewed = false; // Default value
     }
 
-    // Getters y Setters para los campos
+    // Getters and Setters
 
     public int getId() {
         return id;
@@ -29,7 +27,6 @@ public class Film {
     public void setId(int id) {
         this.id = id;
     }
-
     public String getTitle() {
         return title;
     }
@@ -78,6 +75,7 @@ public class Film {
         this.viewed = viewed;
     }
 
+    // toString() Method
     @Override
     public String toString() {
         return "Film{" +

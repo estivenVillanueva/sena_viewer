@@ -1,64 +1,24 @@
 package edu.misena.senaviewer.model;
 
-import java.util.ArrayList;
-import java.util.List;
+public class Book extends Publication {
+    private int id;
+    private String isbn;
+    private boolean readed;
+    private int timeReaded;
 
-public class Book {
-    public int id;
-    public String title;
-    public String edititionDate;
-    public String editorial;
-    public List<String> authors;
-    public String isbn;
-    public boolean readed;
-    public int timeReaded;
-
-    public Book(String title, String edititionDate, String editorial, String isbn) {
-        this.title = title;
-        this.edititionDate = edititionDate;
-        this.editorial = editorial;
+    // Constructor
+    public Book(String title, String editionDate, String editorial, String isbn) {
+        super(title, editionDate, editorial);
         this.isbn = isbn;
-        this.authors = new ArrayList<>();
     }
 
+    // Getters and Setters
     public int getId() {
         return id;
     }
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getEdititionDate() {
-        return edititionDate;
-    }
-
-    public void setEdititionDate(String edititionDate) {
-        this.edititionDate = edititionDate;
-    }
-
-    public String getEditorial() {
-        return editorial;
-    }
-
-    public void setEditorial(String editorial) {
-        this.editorial = editorial;
-    }
-
-    public List<String> getAuthors() {
-        return authors;
-    }
-
-    public void setAuthors(List<String> authors) {
-        this.authors = authors;
     }
 
     public String getIsbn() {
@@ -83,5 +43,17 @@ public class Book {
 
     public void setTimeReaded(int timeReaded) {
         this.timeReaded = timeReaded;
+    }
+
+    // toString() Method
+    @Override
+    public String toString() {
+        return "Book{" +
+                super.toString() +
+                ", id=" + id +
+                ", isbn='" + isbn + '\'' +
+                ", readed=" + readed +
+                ", timeReaded=" + timeReaded +
+                '}';
     }
 }

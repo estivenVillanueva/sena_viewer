@@ -1,22 +1,23 @@
 package edu.misena.senaviewer.model;
 
-import java.awt.*;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Publication {
     private String title;
-    private String edititionDate;
+    private String editionDate;
     private String editorial;
-    public java.util.List<String> authors;
+    private List<String> authors;
 
     // Constructor
-    public Publication(String title, String edititionDate, String editorial) {
+    public Publication(String title, String editionDate, String editorial) {
         this.title = title;
-        this.edititionDate = edititionDate;
+        this.editionDate = editionDate;
         this.editorial = editorial;
+        this.authors = new ArrayList<>();
     }
 
-    // Getters y Setters
+    // Getters and Setters
     public String getTitle() {
         return title;
     }
@@ -25,12 +26,12 @@ public class Publication {
         this.title = title;
     }
 
-    public String getEdititionDate() {
-        return edititionDate;
+    public String getEditionDate() {
+        return editionDate;
     }
 
-    public void setEdititionDate(String edititionDate) {
-        this.edititionDate = edititionDate;
+    public void setEditionDate(String editionDate) {
+        this.editionDate = editionDate;
     }
 
     public String getEditorial() {
@@ -41,7 +42,7 @@ public class Publication {
         this.editorial = editorial;
     }
 
-    public java.util.List<String> getAuthors() {
+    public List<String> getAuthors() {
         return authors;
     }
 
@@ -49,13 +50,24 @@ public class Publication {
         this.authors = authors;
     }
 
+    // Methods to manage authors
+    public void addAuthor(String author) {
+        authors.add(author);
+    }
+
+    public void removeAuthor(String author) {
+        authors.remove(author);
+    }
+
+    // toString() Method
     @Override
     public String toString() {
         return "Publication{" +
                 "title='" + title + '\'' +
-                ", edititionDate='" + edititionDate + '\'' +
+                ", editionDate='" + editionDate + '\'' +
                 ", editorial='" + editorial + '\'' +
                 ", authors=" + authors +
                 '}';
     }
 }
+
