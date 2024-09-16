@@ -5,7 +5,7 @@ import java.util.Scanner;
 import edu.misena.senaviewer.model.*;
 
 public class Main {
-    // Define the lists using the List interface
+
     private List<Movie> movies;
     private List<Serie> series;
     private List<Book> books;
@@ -13,9 +13,9 @@ public class Main {
     private Report report;
     private ReportToday reportToday;
 
-    // Constructor
+
     public Main() {
-        // Initialize the lists as ArrayList (concrete implementation)
+
         movies = new ArrayList<>();
         series = new ArrayList<>();
         books = new ArrayList<>();
@@ -24,7 +24,7 @@ public class Main {
         reportToday = new ReportToday();
     }
 
-    // Application logic
+
     public void run() {
         Scanner scanner = new Scanner(System.in);
         int option;
@@ -100,7 +100,7 @@ public class Main {
         }
     }
 
-    // Placeholder methods for generating reports
+    
     public void generateReport() {
         System.out.println("Generating report...");
     }
@@ -109,7 +109,7 @@ public class Main {
         System.out.println("Generating report for today...");
     }
 
-    // Main method to start the application
+
     public static void main(String[] args) {
         Main viewer = new Main();
         viewer.run();
